@@ -1,0 +1,24 @@
+main .motor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .motor img {
+  width: 60%;
+  height: 60%;
+  border-radius: 50px;
+  margin: auto;
+  display: flex;
+  margin-bottom: 20px;
+}
+main .motor p {
+  width: 60%;
+  height: 60%;
+  padding: 20px;
+  background-color: rgba(255, 0, 0, 0.6117647059);
+  border-radius: 20px;
+  text-align: center;
+  margin: 40px;
+}
+
+/*# sourceMappingURL=motor.css.map */

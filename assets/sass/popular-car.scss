@@ -1,0 +1,126 @@
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: #131c21;
+    color: #FFF;
+
+    .popular-car {
+        .section-title {
+            text-align: center;
+            margin: 50px 0;
+            h2 {
+                font-size: 1.5em;
+                margin-bottom: 10px;
+            }
+            h3 {
+                font-weight: lighter;
+                font-size: 1em;
+            }
+        }
+        .car {
+            margin: 50px 0;
+            .individual-car {
+                
+                width: 130%;
+                height: 400px;
+                position: relative;
+                margin-top: 60px;
+                background-repeat: no-repeat;
+                box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.788);
+                
+                
+                .description {
+                    height: 130px;
+                    width: 100%;
+                    position: absolute;
+                    bottom: 0;
+                    background-color: #10191e80;
+                    padding: 0 40px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    .name {
+                        display: flex;
+                        h3 {
+                            padding-left: 10px;
+                        }
+                        img {
+                            width: 40px;
+                            height: 50px;
+                          }
+                    }
+                }
+                &:nth-child(1) {
+                    background: url('/assets/imagens/550Maramelo.jpg') ;
+                    
+                }
+                &:nth-child(2) {
+                    background: url('/assets/imagens/italia.jpg');
+                }
+                &:nth-child(3) {
+                    background: url('/assets/imagens/laferrari.jpg');
+                }
+                &:nth-child(4) {
+                    background: url('/assets/imagens/spider.jpg');
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    main {
+        .popular-car {
+           
+            
+            .section-title {
+                h2 {
+                    font-size: 2.5em;
+                }
+                h3 {
+                    font-size: 1.5em;
+                }
+            }
+            .car {
+                
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                .individual-car {
+                    
+                    width: 370px;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1200px) {
+    main {
+
+        .popular-car {
+            
+            .car {
+                flex-wrap: nowrap;
+                justify-content: space-around;
+                
+                .individual-car {
+                    width: 400px;
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1400px) {
+    .popular-car {
+        .section-title {
+            h2 {
+                font-size: 2.5em;
+            }
+            h3 {
+                font-size: 2em;
+            }
+        }
+    }
+}

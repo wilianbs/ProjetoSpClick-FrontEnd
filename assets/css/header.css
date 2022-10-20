@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #131c21;
+  font-family: "Lato", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+body .show-desktop, body .show-tablet {
+  display: none;
+}
+body ul {
+  margin: 0;
+  padding: 0;
+}
+body ul li {
+  list-style: none;
+}
+body ul li a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+body header {
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #161618;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #ccc;
+  z-index: 3;
+}
+body header img {
+  width: 65px;
+  height: 65px;
+}
+body header svg {
+  fill: #fff;
+}
+body header .header-content {
+  margin: 0 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+body header .header-content .search {
+  position: relative;
+}
+body header .header-content .search input {
+  width: 500px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1882352941);
+  border-radius: 20px;
+  color: #fff;
+  outline: 0;
+  border: none;
+  padding: 0 50px;
+}
+body header .header-content .search input::placeholder {
+  color: #fff;
+  font-size: 1.1em;
+}
+body header .header-content .search img {
+  position: absolute;
+  top: 7px;
+  left: 15px;
+  width: 24px;
+}
+body header .menu-links {
+  position: fixed;
+  width: 300px;
+  height: 100vh;
+  background-color: #c7c7cc;
+  right: -300px;
+  top: 0;
+  transition: all ease-in 0.3s;
+}
+body header .menu-links .close-icon {
+  float: right;
+  margin: 25px;
+}
+body header .menu-links ul {
+  margin: 150px 0;
+  text-align: center;
+  font-size: 20px;
+}
+body header .menu-links ul li {
+  margin: 40px;
+}
+body header .menu-links ul li a {
+  color: #000;
+}
+body header .menu-links.menu-open {
+  right: 0;
+}
+
+@media (min-width: 768px) {
+  body .show-tablet {
+    display: block;
+  }
+}
+@media (min-width: 1200px) {
+  body .show-desktop {
+    display: block;
+  }
+  body .show-mobile {
+    display: none;
+  }
+  body header .header-content .nav-desktop ul {
+    display: flex;
+  }
+  body header .header-content .nav-desktop ul li {
+    color: #fff;
+    min-width: 100px;
+    margin-left: 20px;
+  }
+}
+
+/*# sourceMappingURL=header.css.map */

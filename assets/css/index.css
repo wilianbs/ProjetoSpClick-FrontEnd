@@ -1,0 +1,587 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+@font-face {
+  font-family: "Lato";
+  src: url("/assets/fonts/Lato/Lato-Regular.ttf") format("thuetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("/assets/fonts/Lato/Lato-Bold.ttf") format("thuetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("/assets/fonts/Lato/Lato-Light.ttf") format("thuetype");
+  font-display: swap;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #131c21;
+  font-family: "Lato", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+body .show-desktop, body .show-tablet {
+  display: none;
+}
+body ul {
+  margin: 0;
+  padding: 0;
+}
+body ul li {
+  list-style: none;
+}
+body ul li a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+body header {
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #161618;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #ccc;
+  z-index: 3;
+}
+body header img {
+  width: 65px;
+  height: 65px;
+}
+body header svg {
+  fill: #fff;
+}
+body header .header-content {
+  margin: 0 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+body header .header-content .search {
+  position: relative;
+}
+body header .header-content .search input {
+  width: 500px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1882352941);
+  border-radius: 20px;
+  color: #fff;
+  outline: 0;
+  border: none;
+  padding: 0 50px;
+}
+body header .header-content .search input::placeholder {
+  color: #fff;
+  font-size: 1.1em;
+}
+body header .header-content .search img {
+  position: absolute;
+  top: 7px;
+  left: 15px;
+  width: 24px;
+}
+body header .menu-links {
+  position: fixed;
+  width: 300px;
+  height: 100vh;
+  background-color: #c7c7cc;
+  right: -300px;
+  top: 0;
+  transition: all ease-in 0.3s;
+}
+body header .menu-links .close-icon {
+  float: right;
+  margin: 25px;
+}
+body header .menu-links ul {
+  margin: 150px 0;
+  text-align: center;
+  font-size: 20px;
+}
+body header .menu-links ul li {
+  margin: 40px;
+}
+body header .menu-links ul li a {
+  color: #000;
+}
+body header .menu-links.menu-open {
+  right: 0;
+}
+
+@media (min-width: 768px) {
+  body .show-tablet {
+    display: block;
+  }
+}
+@media (min-width: 1200px) {
+  body .show-desktop {
+    display: block;
+  }
+  body .show-mobile {
+    display: none;
+  }
+  body header .header-content .nav-desktop ul {
+    display: flex;
+  }
+  body header .header-content .nav-desktop ul li {
+    color: #fff;
+    min-width: 100px;
+    margin-left: 20px;
+  }
+}
+section#hero {
+  height: 100vh;
+  background-image: url("/assets/imagens/Ferrari-Wallpaper-2.webp");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+section#hero::before {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  color: #fff;
+}
+section#hero .destak {
+  width: 100%;
+  height: calc(100vh - 100px);
+  bottom: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+section#hero .destak .title {
+  margin-left: 20px;
+  color: #fff;
+  margin-top: 350px;
+  text-align: left;
+  text-shadow: 2px 2px 10px black;
+}
+
+@media (min-width: 768px) {
+  body section#hero .destak .title h1 {
+    font-size: 2em;
+  }
+  body section#hero .destak .title h2 {
+    font-size: 1.2em;
+  }
+}
+main {
+  display: flex;
+  flex-direction: column;
+  background-color: #131c21;
+  color: #FFF;
+}
+main .popular-car .section-title {
+  text-align: center;
+  margin: 50px 0;
+}
+main .popular-car .section-title h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+main .popular-car .section-title h3 {
+  font-weight: lighter;
+  font-size: 1em;
+}
+main .popular-car .car {
+  margin: 50px 0;
+}
+main .popular-car .car .individual-car {
+  width: 130%;
+  height: 400px;
+  position: relative;
+  margin-top: 60px;
+  background-repeat: no-repeat;
+  box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.788);
+}
+main .popular-car .car .individual-car .description {
+  height: 130px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(16, 25, 30, 0.5019607843);
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main .popular-car .car .individual-car .description .name {
+  display: flex;
+}
+main .popular-car .car .individual-car .description .name h3 {
+  padding-left: 10px;
+}
+main .popular-car .car .individual-car .description .name img {
+  width: 40px;
+  height: 50px;
+}
+main .popular-car .car .individual-car:nth-child(1) {
+  background: url("/assets/imagens/550Maramelo.jpg");
+}
+main .popular-car .car .individual-car:nth-child(2) {
+  background: url("/assets/imagens/italia.jpg");
+}
+main .popular-car .car .individual-car:nth-child(3) {
+  background: url("/assets/imagens/laferrari.jpg");
+}
+main .popular-car .car .individual-car:nth-child(4) {
+  background: url("/assets/imagens/spider.jpg");
+}
+
+@media (min-width: 768px) {
+  main .popular-car .section-title h2 {
+    font-size: 2.5em;
+  }
+  main .popular-car .section-title h3 {
+    font-size: 1.5em;
+  }
+  main .popular-car .car {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  main .popular-car .car .individual-car {
+    width: 370px;
+  }
+}
+@media (min-width: 1200px) {
+  main .popular-car .car {
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+  main .popular-car .car .individual-car {
+    width: 400px;
+    margin-left: 20px;
+  }
+}
+@media (min-width: 1400px) {
+  .popular-car .section-title h2 {
+    font-size: 2.5em;
+  }
+  .popular-car .section-title h3 {
+    font-size: 2em;
+  }
+}
+main .why-choose-us {
+  background-color: #393939;
+  text-align: center;
+  padding: 50px 0;
+}
+main .why-choose-us h2 {
+  font-size: 1.6em;
+  margin: 0;
+}
+main .why-choose-us .reasons {
+  display: flex;
+  flex-direction: column;
+}
+main .why-choose-us .reasons .reason-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+main .why-choose-us .reasons .reason-item .icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  background-color: #b8b8b8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .why-choose-us .reasons .reason-item.active {
+  border-bottom: 1px solid #8d9035;
+}
+main .why-choose-us .reasons .reason-item.active .icon {
+  background-color: #8d9035;
+}
+main .why-choose-us .reasons .reason-item.active h3 {
+  color: #8d9035;
+}
+main .why-choose-us .reasons .reason-item .reason-title h3 {
+  margin: 20px 0;
+}
+main .why-choose-us .reasons .reason-item .reason-title p {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  main .why-choose-us h2 {
+    font-size: 2.5em;
+  }
+  main .why-choose-us .reasons {
+    flex-direction: row;
+  }
+  main .why-choose-us .reasons .reason-item {
+    width: 400px;
+  }
+}
+@media (min-width: 992px) {
+  main .why-choose-us .reasons {
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  main .why-choose-us .reasons .reason-item {
+    cursor: pointer;
+  }
+}
+@media (min-width: 1400px) {
+  main .why-choose-us .reasons {
+    margin: auto;
+    max-width: 1300px;
+  }
+}
+main .history {
+  margin: 20px 70px 20px 70px;
+  background-color: #131c21;
+  text-align: start;
+  padding: 20px;
+  padding-left: 40px;
+}
+main .history h2 {
+  font-size: 1.6em;
+  margin-left: 80px;
+  margin-bottom: 20px;
+}
+main .history p {
+  margin: 10px;
+}
+main .icon-history {
+  display: flex;
+  justify-items: center;
+  width: 50px;
+  height: 50px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato";
+}
+body .show-desktop, body .show-tablet {
+  display: none;
+}
+body a {
+  text-decoration: none;
+  color: #FFF;
+  cursor: pointer;
+}
+body ul {
+  margin: 0;
+  padding: 0;
+}
+body ul li {
+  list-style: none;
+}
+body h1, body h2, body h3, body h4, body h5, body h6, body p {
+  margin: 0;
+}
+body .custom-hr {
+  width: 180px;
+  height: 2px;
+  margin: 0;
+  margin-top: 10px;
+  border-color: #bfbc37;
+  background-color: #bfbc37;
+}
+body .section-max-width {
+  max-width: 300px;
+  margin: 0 auto;
+}
+body .section-subtitle {
+  font-size: 1.5em;
+}
+body main {
+  display: flex;
+  flex-direction: column;
+  background-color: #131c21;
+  color: #FFF;
+}
+
+@media (min-width: 768px) {
+  body .section-max-width {
+    max-width: 760px;
+  }
+  body .section-subtitle {
+    font-size: 2.5em;
+  }
+  body .show-tablet {
+    display: block;
+  }
+}
+@media (min-width: 1200px) {
+  body .section-max-width {
+    max-width: 1200px;
+  }
+  body .show-desktop {
+    display: block;
+  }
+  body .show-mobile {
+    display: none;
+  }
+}
+@media (min-width: 1400px) {
+  body .section-max-width {
+    max-width: 1300px;
+  }
+}
+main .motor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .motor img {
+  width: 60%;
+  height: 60%;
+  border-radius: 50px;
+  margin: auto;
+  display: flex;
+  margin-bottom: 20px;
+}
+main .motor p {
+  width: 60%;
+  height: 60%;
+  padding: 20px;
+  background-color: rgba(255, 0, 0, 0.6117647059);
+  border-radius: 20px;
+  text-align: center;
+  margin: 40px;
+}
+
+footer {
+  margin-top: 80px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+footer::before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  color: #fff;
+}
+footer .footer-info {
+  padding-top: 40px;
+  border-radius: 100px 100px 0 0;
+  background: rgb(202, 0, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .footer-info .logo {
+  align-self: 100px;
+  margin-left: 10px;
+}
+footer .footer-info img {
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  height: 50%;
+}
+footer .footer-info .links-and-contact {
+  margin-top: 50px;
+  width: 100%;
+  text-align: center;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.411);
+}
+footer .footer-info .links-and-contact .footer-links li {
+  margin: 30px;
+  text-align: center;
+}
+footer .footer-info .links-and-contact h3 {
+  font-size: 1.6em;
+}
+footer .footer-info .links-and-contact .contact {
+  margin-top: 40px;
+}
+footer .footer-info .social-media {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0;
+}
+footer .footer-info .social-media a img {
+  height: 50px;
+}
+footer .footer-info .social-media img {
+  height: 100%;
+}
+footer .fonte {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+footer .fonte img {
+  margin: 30px;
+  width: 170px;
+  height: 100%;
+}
+footer .fonte .copyright {
+  width: 80%;
+  height: 100px;
+  border-top: 2px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  footer {
+    margin-top: 10px;
+    display: flex;
+  }
+  footer .footer-info {
+    padding-top: 5px;
+  }
+  footer .footer-info .footer-links {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+  }
+  footer .footer-info .footer-links nav {
+    font-size: 1.8em;
+  }
+  footer .footer-info .social-media {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+  }
+  footer .links-and-contact {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .links-and-contact img {
+    margin: auto;
+  }
+  footer .links-and-contact .contact h3 {
+    font-size: 1.8em;
+  }
+  footer .links-and-contact .contact p {
+    font-size: 1.6em;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
