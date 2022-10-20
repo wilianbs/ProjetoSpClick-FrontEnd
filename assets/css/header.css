@@ -67,9 +67,9 @@ body header .header-content .search input::placeholder {
 }
 body header .header-content .search img {
   position: absolute;
-  top: 7px;
   left: 15px;
   width: 24px;
+  height: 100%;
 }
 body header .menu-links {
   position: fixed;
